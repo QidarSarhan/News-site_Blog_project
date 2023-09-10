@@ -1,0 +1,304 @@
+==================
+#Requirements analysis:
+==================
+-> Settings
+    - (logo - title - description - favicon - ...etc)
+    - (settings - setting translations)
+-> Category
+    - (name - description - image)
+    - (categories - category translations)
+-> Posts
+    - (name - description - short or small description - image - tags -)
+    - (posts - posts translations)
+-> tags
+    - (id - tag name) 
+    - (tags - tags translations)
+-> Users
+-
+
+->
+-
+
+->
+-
+
+//------------------------------------------------------------------------------------------
+==================
+#Models	:
+==================
+-> Setting
+- public $translatedAttributes = ['title', 'content', 'address'];
+- protected $fillable = ['id', 'logo', 'favicon', 'facebook', 'instagram', 'phone', 'email', 'created_at', 'updated_at', 'deleted_at'];
+- 
+-> SettingTranslation
+- protected $fillable = ['id', 'setting_id', 'locale', 'title', 'content', 'address'];
+- 
+- 
+-> User
+-  protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'status'
+    ];
+- protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+- protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+- 
+- 
+-> Category
+- public $translatedAttributes = ['title', 'content'];   
+- protected $fillable = ['id', 'image', 'parent', 'created_at', 'updated_at', 'deleted_at'];
+- 
+-> CategoryTranslation
+- protected $fillable = ['title', 'content'];
+- 
+-> Post
+- public $translatedAttributes = ['title', 'content','smallDesc', 'tags'];
+- protected $fillable = ['id', 'image', 'category_id', 'created_at', 'updated_at', 'deleted_at', 'user_id'];
+- 
+-> PostTranslation
+- protected $fillable = ['id', 'post_id', 'locale', 'title', 'content', 'smallDesc', 'tags'];
+- 
+- 
+-> 
+- 
+-  
+-> 
+- 
+- 
+
+//------------------------------------------------------------------------------------------
+==================
+#Database	:
+==================
+-> categories
+-> category_translations
+-> failed_jobs
+-> migrations
+-> password_resets
+-> password_reset_tokens
+-> personal_access_tokens
+-> posts
+-> post_tag	#deleted
+-> post_translations
+-> settings
+-> setting_translations
+-> tags 	#deleted
+-> tags_translations	#deleted
+-> users
+-> 
+-> 
+-> 
+
+//------------------------------------------------------------------------------------------
+==================
+#Controllers	:
+==================
+-> Dashboard
+- CategoryController
+- PostsController
+- SettingController
+- UserController
+- 
+-> Website
+- IndexController
+- CategoryController
+- PostController
+- 
+-> 
+- 
+- 
+
+//------------------------------------------------------------------------------------------
+==================
+#Policies	:
+==================
+-> PostPolicy
+-> SettingPolicy
+-> UserPolicy
+-> 
+-> 
+-> 
+
+
+//------------------------------------------------------------------------------------------
+==================
+#Resources	:
+==================
+1-> https://github.com/Astrotomic/laravel-translatable
+
+2-> https://docs.astrotomic.info/laravel-translatable/installation
+
+3-> Laravel UI utilities and presets.
+- very simple authentication scaffolding built on the Bootstrap CSS framework
+- https://github.com/laravel/ui
+
+4-> DataTables CDN
+- https://cdn.datatables.net/
+
+5-> Yajra Box Laravel Datatables
+- Open Source Projects
+- https://yajrabox.com/docs/laravel-datatables/10.0
+
+
+6-> BootstrapCDN
+- https://www.bootstrapcdn.com/
+
+7-> Bootstrap front-end framework
+- https://getbootstrap.com/
+
+8-> CoreUI-Free-Bootstrap-Admin-Template-RTL
+- https://github.com/mmdsharifi/CoreUI-Free-Bootstrap-Admin-Template-RTL
+- https://github.com/coreui/coreui-free-bootstrap-admin-template
+- https://coreui.io/product/free-bootstrap-admin-template/
+
+9-> CKEditor
+- The rich text editor for every use case
+- CKEditor is a modern, feature-rich JavaScript text editor with clean UI and perfect UX. Easily customizable to any use case.
+- https://ckeditor.com/ckeditor-5/
+
+10-> Mcamara laravel-localization
+- Easy localization for Laravel
+- https://github.com/mcamara/laravel-localization
+- Install the package via composer: composer require mcamara/laravel-localization
+- 
+
+11-> Laravel_Authorization-Creating_Policies-Writing_Policies
+-https://laravel.com/docs/10.x/authorization#creating-policies
+- php artisan make:policy PostPolicy --model=Post
+- https://laravel.com/docs/10.x/authorization#writing-policies
+- 
+- 
+- 
+
+12-> NEWSROOM FREE CSS TEMPLATE
+- Responsive, Mixed Columns
+- Blog, Bootstrap, jQuery, Magazine, News, Responsive
+- https://www.free-css.com/free-css-templates/page278/newsroom
+
+13-> Laravel Eloquent eager loading with limit
+- This Laravel Eloquent extension allows limiting the number of eager loading results per parent using window functions.
+- https://github.com/staudenmeir/eloquent-eager-limit
+- composer require staudenmeir/eloquent-eager-limit:"^^^^1.0"
+
+14-> 
+- 
+- 
+- 
+
+15-> 
+- 
+- 
+- 
+ 
+16-> 
+- 
+- 
+- 
+
+
+//------------------------------------------------------------------------------------------
+==================
+#APIs	: 
+==================
+-> api => aplication programing interface => xml or json
+- post 1
+- put 1
+- delete 1
+- 
+- 
+-> make endpoint to
+- settings
+- categories
+- category
+- navbar
+- posts
+- post
+- 
+- 
+-> using (Postman)
+- https://www.postman.com/
+- 
+- 
+-> controller
+- Api/SettingController
+- 
+- 
+-> middleware 
+- CheckLanguageApi
+- 
+- 
+-> 
+- 
+- 
+- 
+-> Laravel Sanctum
+- 
+- https://laravel.com/docs/10.x/sanctum
+- composer require laravel/sanctum
+-> 
+- 
+- 
+- 
+-> 
+- 
+- 
+- 
+
+
+//------------------------------------------------------------------------------------------
+==================
+#	:
+==================
+-> 
+-> 
+-> 
+
+
+
+
+//------------------------------------------------------------------------------------------
+==================
+#	:
+==================
+-> 
+-> 
+-> 
+
+
+
+
+
+//------------------------------------------------------------------------------------------
+==================
+#	:
+==================
+-> 
+-> 
+-> 
+
+
+
+
+
+
+
+
+
+//------------------------------------------------------------------------------------------
+==================
+#	:
+==================
+-> 
+-> 
+-> 
+
+
+
+
+//------------------------------------------------------------------------------------------

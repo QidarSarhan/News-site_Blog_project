@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "60e88778-3d58-44b6-9d9a-4df04f355c96",
+		"name": "Youtube_Blog_APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19813253"
+	},
+	"item": [
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "all posts for one category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}posts?category_id=5&page=1",
+							"host": [
+								"{{url}}posts"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one post",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}nav-Categories",
+							"host": [
+								"{{url}}nav-Categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "settings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "lang",
+						"value": "ar",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/youtube_Blog/public/api/settings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"youtube_Blog",
+						"public",
+						"api",
+						"settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nav bar categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "lang",
+						"value": "ar",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}nav-Categories",
+					"host": [
+						"{{url}}nav-Categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index-page-categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "lang",
+						"value": "ar",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}index-page-categories",
+					"host": [
+						"{{url}}index-page-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all categories paginated",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "lang",
+						"value": "ar",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}categories",
+					"host": [
+						"{{url}}categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all categories paginated Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "lang",
+						"value": "ar",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}categories/5",
+					"host": [
+						"{{url}}categories"
+					],
+					"path": [
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "lang",
+						"value": "ar",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}login?email=maykospo@mailinator.com&password=Pa$$w0rd!",
+					"host": [
+						"{{url}}login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "maykospo@mailinator.com"
+						},
+						{
+							"key": "password",
+							"value": "Pa$$w0rd!"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|hjHrjCOWK2mOes6AtYbIqSnjbNU3frZGqMM6Zita",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "lang",
+						"value": "ar",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}logout",
+					"host": [
+						"{{url}}logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categoryadmin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "lang",
+						"value": "ar",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}login?email=maykospo@mailinator.com&password=Pa$$w0rd!",
+					"host": [
+						"{{url}}login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "maykospo@mailinator.com"
+						},
+						{
+							"key": "password",
+							"value": "Pa$$w0rd!"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categoryadmin update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "22|64RkHOCf5msVIubMvWgD5XSGSLb50Z1YE9LHVw4a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "lang",
+						"value": "ar",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}categoryadmin/11",
+					"host": [
+						"{{url}}categoryadmin"
+					],
+					"path": [
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost/youtube_Blog/public/api/",
+			"type": "string"
+		}
+	]
+}
